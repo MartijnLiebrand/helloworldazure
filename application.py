@@ -1,6 +1,9 @@
 from flask import Flask
+from Bio.Seq import Seq
+
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    my_seq = Seq("AGTACACTGGT")
+    return "Hello World! Seq Object gemaakt!"
